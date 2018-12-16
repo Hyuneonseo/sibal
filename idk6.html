@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="utf-8"/>
+	<script src="paper.js"></script>
+	<script type="text/javascript" async="" src="http://www.google-analytics.com/ga.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Nanum+Gothic|Noto+Sans|Noto+Sans+KR" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Heebo|Hind+Madurai|Hind+Siliguri|Nunito+Sans|Yantramanav" rel="stylesheet">
+	<title>땋은머리.파인만</title>
+	<style>
+		@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
+		a:link, a:active, a:visited{text-decoration: none; }
+        a:link, a:active, a:visited{color: black;}
+
+        .test {background-color: yellow;}
+		#changepage{position: fixed; top: 735px; left: -135px; width: 300px; height: 20px; background: #f3ff00; font-weight: 900; text-align: left; font-size: 1.2em; transform: rotate(-90deg);}
+		a #changepage:hover{background: black; color: #f3ff00;}
+		.tophead{margin: auto; width: 1500px; height: 130px; border: 1px solid black; font-family:'Noto Sans KR', '맑은 고딕', '돋움';}
+		#tphd1{background: #f3ff00; float: right; width: 450px; height: 20px; font-weight: 900; text-align: right; font-size: 1.1em;}
+		#tphd2{position: relative; top: 29px; border: 1px solid black; width: 500px; height: 100px; font-weight: 700; font-size: 4em; border-left:0px; }
+		#tphd3{position: relative; top: -73px; left: 1000px; border: 1px solid black; width: 500px; height: 100px; font-weight: 700; font-size: 4em; text-align: right; border-right:0px;}
+
+
+
+
+		.midcon{margin: auto; width: 1500px; height: 750px; border: 1px solid black; font-family:'Noto Sans KR', '맑은 고딕', '돋움';}
+		#midcon1{margin: auto; width: 1500px; height: 10px; background: black;}
+		#midcon2{margin: auto; width: 1500px; height: 10px; background: black; top: 730px; position: relative;}
+		#midcon3{margin: auto; width: 10px; height: 750px; background: black; top: -20px; position: relative;}
+		#midcon4{position: relative; border: 1px solid red; width: 585px; height: 570px; top: -760px; left: 0px; text-align: left; font-size: 2em; font-weight: 700; line-height: 1.7em; overflow: auto; padding: 80px;}
+		#midcon4:hover{color: white;}
+		#midcon5{position: relative; background: black; width: 745px; height: 732px; top: -1492px; left: 755px; overflow: hidden;}
+		#midcon6{position: absolute; top: 0px; left: 0px;}
+		#midcon7{position: relative; overflow: hidden; width: 745px; height: 772px; display: none;}
+		#midcon7 img{width: 745px; height: 732px; }
+		#midmenu{position: absolute; width: 745px; height: 40px; border: 1px solid red; background: blue; z-index: 999;}
+		#midmenu1{position: absolute; width: 140px; height: 40px; border: 1px solid red; font-size: 2em; font-weight: 700; line-height: 1em; color: white; cursor: pointer; left: -1px; top: -1px;}
+		#midmenu2{position: absolute; width: 80px; height: 40px; left: 140px; border: 1px solid red; font-size: 2em; font-weight: 700; line-height: 1em; color: white; cursor: pointer; left: 140px; top: -1px;} 
+		#midmenu3{position: absolute; width: 50px; height: 40px; right: -2px; border: 1px solid red; font-size: 1em; font-weight: 400; line-height: 1em; color: white; cursor: pointer; text-align: right; top: -1px; right: -1px;}
+		#midmenu4{position: absolute; width: 140px; height: 40px; right: 49px; border: 1px solid red; font-size: 1em; font-weight: 400; line-height: 1em; color: white; cursor: pointer; text-align: right; top: -1px; right: 50px;}
+		#midconback{position: absolute; background-color: black; display: none; }
+		#midcongif{position: absolute; left: 190px; top: 200px; display: none;}
+
+
+
+
+		.botind{margin: auto; width: 1500px; height: 150px; border: 1px solid black; font-family:'Noto Sans KR', '맑은 고딕', '돋움'; overflow: hidden;}
+		#botind1{width: 1500px; height: 3px; background: black; top: 17px; position: relative;}
+		#botind2{width: 1500px; height: 3px; background: black; top: 128px; position: relative;}
+		#botind3{position: relative; width: 170px; height: 60px; top: 38px; border: 1px solid black; font-weight: 700; font-size: 4em; line-height: 55px; background: white; border-left:0px; }
+		#botind3:hover{background: #f3ff00;}
+		#botind4{width: 110px; height: 112px; border: 1px solid black; float: right; position: relative; top: -173px; text-align: center;}
+		#botind5{width: 110px; height: 112px; border: 1px solid black; float: right; position: relative; top: -173px; text-align: center;}
+		#botind6{width: 110px; height: 112px; border: 1px solid black; float: right; position: relative; top: -173px; text-align: center;}
+		#botind7{width: 110px; height: 112px; border: 1px solid black; float: right; position: relative; top: -173px; text-align: center;}
+		#botind4 img,#botind5 img,#botind6 img,#botind7 img {height: 110px;}
+
+		#botind8{height:20px; position: relative; width: 300px; height: 60px; top: -148px; border: 1px solid black; font-weight: 900; font-size: 4.6em; line-height: 65px; background: white; left: 751px; font-family: 'Yantramanav', sans-serif; cursor: pointer; text-align: right;}
+		#botind8:hover{background: #f3ff00;}
+		#botind9{position: relative; width: 320px; height: 60px; top: -24px; left: 170px; border: 1px solid black; font-weight: 700; font-size: 4em; line-height: 55px; background: blue; cursor: pointer;}
+		#botind10{position: relative; width: 320px; height: 60px; top: -86px; left: 490px; border: 1px solid black; font-weight: 700; font-size: 4em; line-height: 55px; background: red; cursor: pointer;}	
+
+		.drag1,.drag2,.drag3,.drag4,.drag5,.drag6,.drag7,.drag8,.drag9{position: relative;
+			  top: -740px;
+			  left: 10px;
+			  width:2px;
+			  height:70px;
+			  border-radius: 50%;
+			  
+			  z-index:100000;
+			  margin-top:10px;
+			}
+		.drag1 img,.drag2 img,.drag3 img,.drag4 img,.drag5 img,.drag6 img,.drag7 img,.drag8 img,.drag9 img{width: 40px; height: 40px;}		
+	</style>
+	</head>
+	<body>
+
+		<a href="idk.html"><div id="changepage">느낌표에서 시작된 문장부호 페이지</div></a>
+		<div class="tophead">
+			<div id="tphd1">
+				- 드래그 <a href="idk4.html" style="color: #f3ff00;">하면 설명이 나오게? 설명아니어도 어떤 문장 나오게</a>
+			</div>
+			<div id="tphd2">
+				< <a href="idk5.html">5</a> , <a href="idk6.html" style="color: green;">6</a> , <a href="idk7.html">7</a> , <a href="idk8.html">8</a> >
+			</div>
+			<div id="tphd3">
+				파인만 효과
+			</div>
+		</div>	
+		<div class="midcon">
+			<div id="midmenu">
+				<div id="midmenu1">
+					배경지식,
+				</div>
+				<div id="midmenu2">
+					끄기
+				</div>
+				<div id="midmenu3">
+					끄기
+				</div>
+				<div id="midmenu4">
+					🖼️캔버스사용예시
+				</div>
+			</div>
+			<div id="midcon1"></div>
+			<div id="midcon2"></div>
+			<div id="midcon3"></div>
+			<div id="midcon4">
+				<div id="midconback">
+					<img src="fyman.png">
+				</div>
+				<div id="midcongif">
+					<img src="umum.gif">
+				</div>
+				<a href="fyman.png">요컨대</a> 캐번디시 실험의 작은 태양계 모형, <a href="fyman.png">즉</a> 서로를 끌어당기는 두 구슬은 100만의 1,000만 배로 확대해야 태양계 규모가 된다. <br><br><a href="fyman.png">다시 말해</a> 태양계를 다시 100만의 1,000만배로 확대하면, <a href="fyman.png">역시 정확히</a> 똑같은 중력법칙에 의해 서로를 끌어당기는 은하계들을 만나게 되는 것이다. <br><br><a href="fyman.png">즉</a> 자연이라는 천에 있는 패턴들은 가장 긴 실로 수놓아져 있는 것이다. <br><br>그래서 각각의 작은 천 조각이 곧 자연 전체의 조직을 보여준다. <br><br><a href="fyman.png">요컨대</a> 수학을 모르는 사람은 자연의 아름다움-가장 심원한 아름다움-을 실제로 체험하기 힘들다. <br><br>그 말은 <a href="fyman.png">곧</a> 자연을 감상할 수 있을 만큼 충분히 수학을 이해하는 사람과 그렇지 못한 사람 두 종류로 구분된다는 뜻이다. 
+			</div>
+			<div id="midcon5" onclick="takeScreenShot()">
+				<div id="midcon7">
+					<img src="grid4.png">
+				</div>
+				
+				<div id="midcon6">
+					<canvas id="myCanvas" style="width:745px; height:732px;"></canvas>
+				</div>	
+
+				<div class="drag1"><img src="drag1.png"></div>
+		      	<div class="drag2"><img src="drag2.png"></div>
+		      	<div class="drag3"><img src="drag3.png"></div>
+		      	<div class="drag4"><img src="drag4.png"></div>	
+		      	<div class="drag5"><img src="drag5.png"></div>
+		      	<div class="drag6"><img src="drag6.png"></div>
+		      	<div class="drag7"><img src="drag7.png"></div>
+		      	<div class="drag8"><img src="drag8.png"></div>	
+		      	<div class="drag9"><img src="drag9.png"></div>	
+			</div>
+		</div>
+		<div class="botind">
+			<div id="botind1"></div>
+			<div id="botind2"></div>
+			<div id="botind3">보기 :</div>
+			<div id="botind9">소스 보기 <a href="" style="font-size: 10pt; position: absolute; line-height: 13pt; top: 0px; color: white;">드래그 해서 사용</a></div>
+			<div id="botind10">소스 끄기</div>
+
+			<div id="botind4">
+				<img src="interrobang.png">
+			</div>
+			<div id="botind5">
+				<img src="acclamation.png">
+			</div>
+			<div id="botind6">
+				<img src="conviction.png">
+			</div>
+			<div id="botind7">
+				<img src="authority.png">
+			</div>
+
+			<div id="botind8" style="font-size: 1em; ">캔버스 안에서 클릭하여 스냅샷 저장</div>
+		</div>
+		
+		
+	</body>
+	<script>
+
+		$(".drag1").draggable();
+		$(".drag2").draggable();
+		$(".drag3").draggable();
+		$(".drag4").draggable();
+		$(".drag5").draggable();
+		$(".drag6").draggable();
+		$(".drag7").draggable();
+		$(".drag8").draggable();
+		$(".drag9").draggable();
+		var takeScreenShot = function() {
+		    html2canvas(document.getElementById("midcon5"), {
+		        onrendered: function (canvas) {
+		            var tempcanvas=document.createElement('canvas');
+		            tempcanvas.width=745;
+		            tempcanvas.height=732;
+		            var context=tempcanvas.getContext('2d');
+		            context.drawImage(canvas,0,0,745,730,0,0,745,732);
+		            var link=document.createElement("a");
+		            link.href=tempcanvas.toDataURL('image/jpg');   //function blocks CORS
+		            link.download = 'screenshot.jpg';
+		            link.click();
+		        }
+		    });
+		}
+		midmenu1.onclick = function(){
+			document.getElementById("midconback").style.display = 'inline';		
+		}
+		midmenu2.onclick = function(){
+			document.getElementById("midconback").style.display = 'none';		
+		}
+		midmenu4.onclick = function(){
+			document.getElementById("midcongif").style.display = 'inline';		
+		}
+		midmenu3.onclick = function(){
+			document.getElementById("midcongif").style.display = 'none';		
+		}
+
+
+
+		botind9.onclick = function(){
+			document.getElementById("midcon7").style.display = 'inline';
+		}
+		botind10.onclick = function(){
+			document.getElementById("midcon7").style.display = 'none';
+		}
+
+		window.onscroll = function() {myFunction()};
+
+		function myFunction() {
+		    if (document.body.scrollTop > 1 || document.documentElement.scrollTop > 1) {
+		        document.getElementById("midcon4").className = "test";
+		    } else {
+		        document.getElementById("midcon4").className = "";
+		    }
+		}
+
+		
+	</script>
+	<script type="text/paperscript" canvas="myCanvas">
+			project.currentStyle = {
+				fillColor: 'white'
+
+			};
+
+			var ballPositions = [[80, 50], [370, 50], [660, 50],
+				[80, 370], [370, 370], [660, 370], 
+				[80, 680], [370, 680], [660, 680], 
+				[1111, 400], [1352, 86], [920, 798]];
+
+			var handle_len_rate = 2.4;
+			var circlePaths = [];
+			var radius = 50;
+			for (var i = 0, l = ballPositions.length; i < l; i++) {
+				var circlePath = new Path.Circle({
+					center: ballPositions[i],
+					radius: 50
+				});
+				circlePaths.push(circlePath);
+			}
+
+			var largeCircle = new Path.Circle({
+				center: [676, 433],
+				radius: 100
+			});
+			circlePaths.push(largeCircle);
+
+			function onMouseMove(event) {
+				largeCircle.position = event.point;
+				generateConnections(circlePaths);
+			}
+
+			var connections = new Group();
+			function generateConnections(paths) {
+				// Remove the last connection paths:
+				connections.children = [];
+
+				for (var i = 0, l = paths.length; i < l; i++) {
+					for (var j = i - 1; j >= 0; j--) {
+						var path = metaball(paths[i], paths[j], 0.5, handle_len_rate, 280);
+						if (path) {
+							connections.appendTop(path);
+							path.removeOnMove();
+						}
+					}
+				}
+			}
+
+			generateConnections(circlePaths);
+
+			// ---------------------------------------------
+			function metaball(ball1, ball2, v, handle_len_rate, maxDistance) {
+				var center1 = ball1.position;
+				var center2 = ball2.position;
+				var radius1 = ball1.bounds.width / 2;
+				var radius2 = ball2.bounds.width / 2;
+				var pi2 = Math.PI / 2;
+				var d = center1.getDistance(center2);
+				var u1, u2;
+
+				if (radius1 == 0 || radius2 == 0)
+					return;
+
+				if (d > maxDistance || d <= Math.abs(radius1 - radius2)) {
+					return;
+				} else if (d < radius1 + radius2) { // case circles are overlapping
+					u1 = Math.acos((radius1 * radius1 + d * d - radius2 * radius2) /
+							(2 * radius1 * d));
+					u2 = Math.acos((radius2 * radius2 + d * d - radius1 * radius1) /
+							(2 * radius2 * d));
+				} else {
+					u1 = 0;
+					u2 = 0;
+				}
+
+				var angle1 = (center2 - center1).getAngleInRadians();
+				var angle2 = Math.acos((radius1 - radius2) / d);
+				var angle1a = angle1 + u1 + (angle2 - u1) * v;
+				var angle1b = angle1 - u1 - (angle2 - u1) * v;
+				var angle2a = angle1 + Math.PI - u2 - (Math.PI - u2 - angle2) * v;
+				var angle2b = angle1 - Math.PI + u2 + (Math.PI - u2 - angle2) * v;
+				var p1a = center1 + getVector(angle1a, radius1);
+				var p1b = center1 + getVector(angle1b, radius1);
+				var p2a = center2 + getVector(angle2a, radius2);
+				var p2b = center2 + getVector(angle2b, radius2);
+
+				// define handle length by the distance between
+				// both ends of the curve to draw
+				var totalRadius = (radius1 + radius2);
+				var d2 = Math.min(v * handle_len_rate, (p1a - p2a).length / totalRadius);
+
+				// case circles are overlapping:
+				d2 *= Math.min(1, d * 2 / (radius1 + radius2));
+
+				radius1 *= d2;
+				radius2 *= d2;
+
+				var path = new Path({
+					segments: [p1a, p2a, p2b, p1b],
+					style: ball1.style,
+					closed: true
+				});
+				var segments = path.segments;
+				segments[0].handleOut = getVector(angle1a - pi2, radius1);
+				segments[1].handleIn = getVector(angle2a + pi2, radius2);
+				segments[2].handleOut = getVector(angle2b - pi2, radius2);
+				segments[3].handleIn = getVector(angle1b + pi2, radius1);
+				return path;
+			}
+
+			// ------------------------------------------------
+			function getVector(radians, length) {
+				return new Point({
+					// Convert radians to degrees:
+					angle: radians * 180 / Math.PI,
+					length: length
+				});
+			}
+		</script>
+</html>
